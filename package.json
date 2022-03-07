@@ -1,0 +1,39 @@
+{
+  "name": "auth-express-passport",
+  "version": "1.0.0",
+  "description": "Autenticación usando la librería de Passport.js para Google, GitHub y Discord",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/JuanesGalvis/Auth-express-passport.git"
+  },
+  "keywords": [
+    "Express.js",
+    "Passport.js",
+    "Google",
+    "GitHub",
+    "Discord"
+  ],
+  "author": "JuanesGalvis <juangalvis.sh@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JuanesGalvis/Auth-express-passport/issues"
+  },
+  "homepage": "https://github.com/JuanesGalvis/Auth-express-passport#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "passport": "^0.5.2",
+    "passport-discord": "^0.1.4",
+    "passport-github": "^1.1.0",
+    "passport-google-oauth": "^2.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
