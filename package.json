@@ -25,13 +25,14 @@
   },
   "homepage": "https://github.com/JuanesGalvis/Auth-express-passport#readme",
   "dependencies": {
+    "cookie-session": "^2.0.0",
     "cors": "^2.8.5",
     "express": "^4.17.3",
     "express-session": "^1.17.2",
     "passport": "^0.5.2",
     "passport-discord": "^0.1.4",
-    "passport-github": "^1.1.0",
-    "passport-google-oauth": "^2.0.0"
+    "passport-github2": "^0.1.12",
+    "passport-google-oauth20": "^2.0.0"
   },
   "devDependencies": {
     "dotenv": "^16.0.0",

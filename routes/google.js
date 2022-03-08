@@ -13,13 +13,9 @@ GoogleRouter.get('/auth/google',
         session: false
     }));
 
-GoogleRouter.get('/auth/google/callback', Passport.authenticate('google'), (req, res) => {
-    // res.json({user: req.user, message: 'LOGIN COMPLETADO CON GOOGLE' });
-    res.redirect(`${process.env.CLIENT_URL}/profile`);
-})
-
-GoogleRouter.get('/google-user', (req, res) => {
-    res.json({ data: req.user });
-})
+GoogleRouter.get('/auth/google/callback', Passport.authenticate('google', {
+    successRedirect: `${process.env.CLIENT_URL}/profile`,
+    failureRedirect: '/auth/failed'
+}))
 
 module.exports = GoogleRouter;

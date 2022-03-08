@@ -6,12 +6,9 @@ const Passport = require('passport');
 
 GitHubRouter.get('/auth/github', Passport.authenticate('github'));
 
-GitHubRouter.get('/auth/github/callback', Passport.authenticate('github'), (req, res) => {
-    res.redirect(`${process.env.CLIENT_URL}/profile`);
-})
-
-GitHubRouter.get('/github-user', (req, res) => {
-    res.json({ data: req.user });
-})
+GitHubRouter.get('/auth/github/callback', Passport.authenticate('github', {
+    successRedirect: `${process.env.CLIENT_URL}/profile`,
+    failureRedirect: '/auth/failed'
+}))
 
 module.exports = GitHubRouter;
