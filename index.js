@@ -52,6 +52,7 @@ App.use(Express.json());
 App.use(require('./routes/google'));  // ✅
 App.use(require('./routes/github'));  // ✅
 App.use(require('./routes/discord')); // ✅
+App.use(require('./routes/twitch')); // ✅
 
 App.get('/auth/success', (req, res) => {
     if (req.user) {

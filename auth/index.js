@@ -13,7 +13,9 @@ Passport.deserializeUser((user, done) => {
 const { GitHub } = require('./github.strategy');
 const { Discord } = require('./discord.strategy');
 const { Google } = require('./google.strategy');
+const { Twitch } = require('./twitch.strategy');
 
 Passport.use("github", GitHub);
 Passport.use("discord", Discord);
 Passport.use("google", Google);
+Passport.use("twitch", Twitch);
